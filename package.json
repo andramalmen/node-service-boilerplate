@@ -10,10 +10,11 @@
         "build": "tsc",
         "test": "jest",
         "test:watch": "jest --watch",
-        "lint": "eslint --ext .js,.ts,.tsx .",
+        "lint": "eslint --ignore-path .prettierignore --ext .js,.ts .",
         "format": "prettier --ignore-path .prettierignore --write --loglevel silent '**/*.{ts,js,json}'",
         "format:check": "prettier --check '**/*.{ts,js,json}'",
-        "validate": "npm-run-all --parallel format:check lint build"
+        "validate": "npm-run-all --parallel format:check lint build",
+        "prepare": "husky install"
     },
     "author": "Andra Malmen",
     "license": "ISC",
